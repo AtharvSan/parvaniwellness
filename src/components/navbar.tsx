@@ -14,37 +14,24 @@ function scrollTo(id: string) {
 
 export default function Navbar() {
   return (
-    <AppShell.Header h={72} px="md">
+    <AppShell.Header h={{ base: 64, sm: 72 }} px={{ base: "sm", sm: "md" }}>
       <Container size="lg" h="100%">
-        <Group h="100%" justify="space-between">
+        <Group h="100%" justify="space-between" align="center">
           <Title order={4} fw={600}>
             Parvani Wellness
           </Title>
 
-          <Group gap="xl">
-            <Text
-              fw={500}
-              c="black"
-              style={{ cursor: "pointer" }}
-              onClick={() => scrollTo("services")}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "teal")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "black")}
-            >
+          <Group
+            gap="lg"
+            visibleFrom="sm"
+          >
+            <Text fw={500} onClick={() => scrollTo("services")} style={{ cursor: "pointer" }}>
               Services
             </Text>
-
-            <Text
-              fw={500}
-              c="black"
-              style={{ cursor: "pointer" }}
-              onClick={() => scrollTo("about")}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "teal")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "black")}
-            >
+            <Text fw={500} onClick={() => scrollTo("about")} style={{ cursor: "pointer" }}>
               About
             </Text>
-
-            <Button radius="xl" onClick={() => scrollTo("contact")}>
+            <Button radius="xl" size="sm" onClick={() => scrollTo("contact")}>
               Book Appointment
             </Button>
           </Group>
