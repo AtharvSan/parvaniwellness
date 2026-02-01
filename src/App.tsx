@@ -27,8 +27,8 @@ export default function App() {
         {/* HERO */}
         <Box id="home" bg="#f4faf7" py={100}>
           <Container size="lg">
-            <SimpleGrid cols={{ base: 1, md: 2 }} spacing={60} align="center">
-              <Stack gap="md">
+            <SimpleGrid cols={{ base: 1, md: 2 }} spacing={60}>
+              <Stack gap="md" justify="center">
                 <Title size={48} fw={600} lh={1.15}>
                   Professional psychology counselling,
                   <br /> focused on healing & clarity
@@ -60,7 +60,7 @@ export default function App() {
 
         {/* SERVICES */}
         <Container id="services" size="lg" py={100}>
-          <Stack gap="xl">
+          <Stack gap="xl" justify="center">
             <Title order={2} ta="center">
               Areas of Support
             </Title>
@@ -93,7 +93,7 @@ export default function App() {
         {/* ABOUT */}
         <Box id="about" bg="gray.0" py={100}>
           <Container size="sm">
-            <Stack gap="md" ta="center">
+            <Stack gap="md" ta="center" justify="center">
               <Title order={2}>About the Counsellor</Title>
               <Text c="dimmed" size="md">
                 A qualified psychology counsellor offering a calm, supportive, and
@@ -108,7 +108,7 @@ export default function App() {
         <Container id="contact" size="lg" py={100}>
           <Card radius="lg" padding="xl" withBorder>
             <Group justify="space-between">
-              <Stack gap={4}>
+              <Stack gap={4} justify="center">
                 <Title order={4}>Visit the Clinic</Title>
                 <Text c="dimmed">Parbhani, Maharashtra</Text>
                 <Text c="dimmed">Mon – Sat · 10:00 AM – 6:00 PM</Text>
